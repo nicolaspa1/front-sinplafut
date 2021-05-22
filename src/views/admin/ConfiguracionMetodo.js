@@ -273,6 +273,7 @@ function Dashboard() {
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
                         <a
+                          // href="../admin/crear-sesion-entrenamiento"
                           href="#mui"
                           className={classes.cardProfileLink}
                           onClick={(e) => e.preventDefault()}

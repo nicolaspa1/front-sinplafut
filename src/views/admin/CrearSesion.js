@@ -6,12 +6,14 @@ import { NativeSelect } from '@material-ui/core';
 
 
 import Box from "@material-ui/core/Box";
+import Button from "@material-ui/core/Button";
+
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/CardHeader";
 import Container from "@material-ui/core/Container";
 import Divider from "@material-ui/core/Divider";
-import FilledInput from "@material-ui/core/FilledInput";
+// import FilledInput from "@material-ui/core/FilledInput";
 import FormControl from "@material-ui/core/FormControl";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormLabel from "@material-ui/core/FormLabel";
@@ -129,49 +131,28 @@ function Profile() {
                 </Box>
                 <div className={classes.plLg4}>
                   <Grid container>
-                    <Grid item xs={12} lg={4}>
-                      <FormGroup>
-                        <FormLabel>Direccion</FormLabel>
-                        <FormControl
-                          variant="filled"
-                          component={Box}
-                          width="100%"
-                          marginBottom="1rem!important"
-                        >
-                          <Box readOnly disabled
-                            paddingLeft="0.75rem"
-                            paddingRight="0.75rem"
-                            component={FilledInput}
-                            autoComplete="off"
-                            type="text"
-                            defaultValue="Avenida Siempreviva 742, Springfield"
-                          />
-                        </FormControl>
-                      </FormGroup>
-                    </Grid>
-                    <Grid item xs={12} lg={4}>
-                      <FormGroup>
-                        <FormLabel>Numero de celular</FormLabel>
-                        <FormControl
-                          variant="filled"
-                          component={Box}
-                          width="100%"
-                          marginBottom="1rem!important"
-                        >
-                          <Box readOnly disabled
-                            paddingLeft="0.75rem"
-                            paddingRight="0.75rem"
-                            component={FilledInput}
-                            autoComplete="off"
-                            type="text"
-                            defaultValue="3132121212"
-                          />
-                        </FormControl>
-                      </FormGroup>
-                    </Grid>
                   </Grid>                  
                 </div>
-
+                <Grid item xs={12} lg={12}>
+                      <FormGroup>
+                        <FormControl
+                          variant="filled"
+                          component={Box}
+                          width="100%"
+                          marginBottom="1rem!important"
+                        >
+                          <Box display="flex" justifyContent="space-between">
+                            <Button
+                              variant="contained"
+                              size="small"
+                              classes={{ root: classes.buttonRootInfo }}
+                            >
+                              Guardar
+                            </Button>
+                          </Box>
+                        </FormControl>
+                      </FormGroup>
+                    </Grid>
               </CardContent>
             </Card>
           </Grid>

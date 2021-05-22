@@ -10,12 +10,11 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Typography from "@material-ui/core/Typography";
 // @material-ui/icons components
-import DirectionsRun from "@material-ui/icons/DirectionsRun";
-import EventNote from "@material-ui/icons/EventNote";
-import LiveHelp from "@material-ui/icons/LiveHelp";
 import Person from "@material-ui/icons/Person";
 import Settings from "@material-ui/icons/Settings";
+import Add from "@material-ui/icons/Add";
 
+import PowerSettingsNewIcon from "@material-ui/icons/PowerSettingsNew";
 // core components
 import componentStyles from "assets/theme/components/navbar-dropdown.js";
 
@@ -65,7 +64,28 @@ export default function NavbarDropdown() {
           height="1.25rem!important"
           marginRight="1rem"
         />
-        <span>Inicio</span>
+        <a href="../admin/index" style={{ textDecoration: "none" }}>
+          <span>Inicio</span>
+        </a>
+      </Box>
+      <Box
+        display="flex!important"
+        alignItems="center!important"
+        component={MenuItem}
+        onClick={handleMenuClose}
+      >
+        <Box
+          component={Add}
+          width="1.25rem!important"
+          height="1.25rem!important"
+          marginRight="1rem"
+        />
+        <a
+          href="../admin/crear-sesion-entrenamiento"
+          style={{ textDecoration: "none" }}
+        >
+          <span>Crear Sesion De Entrenamiento</span>
+        </a>
       </Box>
       <Box
         display="flex!important"
@@ -79,7 +99,12 @@ export default function NavbarDropdown() {
           height="1.25rem!important"
           marginRight="1rem"
         />
-        <span>Settings</span>
+        <a
+          href="../admin/configuracion-sesion-entrenamiento"
+          style={{ textDecoration: "none" }}
+        >
+          <span>Configuracion Sesion De Entrenamiento</span>
+        </a>
       </Box>
       <Box
         display="flex!important"
@@ -88,12 +113,17 @@ export default function NavbarDropdown() {
         onClick={handleMenuClose}
       >
         <Box
-          component={EventNote}
+          component={Add}
           width="1.25rem!important"
           height="1.25rem!important"
           marginRight="1rem"
         />
-        <span>Activity</span>
+        <a
+          href="../admin/crear-metodo-entrenamiento"
+          style={{ textDecoration: "none" }}
+        >
+          <span>Crear Metodo De Entrenamiento</span>
+        </a>
       </Box>
       <Box
         display="flex!important"
@@ -102,13 +132,19 @@ export default function NavbarDropdown() {
         onClick={handleMenuClose}
       >
         <Box
-          component={LiveHelp}
+          component={Settings}
           width="1.25rem!important"
           height="1.25rem!important"
           marginRight="1rem"
         />
-        <span>Support</span>
+        <a
+          href="../admin/configuracion-metodo-entrenamiento"
+          style={{ textDecoration: "none" }}
+        >
+          <span>Configuracion Metodo De Entrenamiento</span>
+        </a>
       </Box>
+
       <Divider component="div" classes={{ root: classes.dividerRoot }} />
       <Box
         display="flex!important"
@@ -117,7 +153,7 @@ export default function NavbarDropdown() {
         onClick={handleMenuClose}
       >
         <Box
-          component={DirectionsRun}
+          component={PowerSettingsNewIcon}
           width="1.25rem!important"
           height="1.25rem!important"
           marginRight="1rem"

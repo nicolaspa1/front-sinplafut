@@ -224,7 +224,7 @@ function Profile() {
                               size="small"
                               classes={{ root: classes.buttonRootInfo }}
                             >
-                              Agregar
+                              Guardar
                             </Button>
                           </Box>
                         </FormControl>

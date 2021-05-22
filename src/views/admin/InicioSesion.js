@@ -18,7 +18,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Typography from "@material-ui/core/Typography";
 
 // core components
-import UserHeader from "components/Headers/UserHeader.js";
+import WelcomeUserHeader from "components/Headers/WelcomeUserHeader.js";
 
 
 import componentStyles from "assets/theme/views/admin/dashboard.js";
@@ -41,7 +41,7 @@ function Dashboard() {
   // };
   return (
     <>
-      <UserHeader />
+      <WelcomeUserHeader />
       {/* Page content */}
       <Container
         maxWidth={false}
