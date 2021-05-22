@@ -15,14 +15,16 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Typography from "@material-ui/core/Typography";
-import GetApp from "@material-ui/icons/GetApp";
-import SearchIcon from "@material-ui/icons/Search";
 import InputBase from "@material-ui/core/InputBase";
-
 // core components
 import UserHeader from "components/Headers/UserHeader.js";
-
 import componentStyles from "assets/theme/views/admin/dashboard.js";
+
+//Icons
+import SearchIcon from "@material-ui/icons/Search";
+import DeleteIcon from '@material-ui/icons/Delete';
+import CreateIcon from '@material-ui/icons/Create';
+
 
 const useStyles = makeStyles(componentStyles);
 
@@ -78,7 +80,7 @@ function Dashboard() {
                             variant="h4"
                             component="a"
                           >
-                            Documentos
+                            Configuracion Sesion De Entrenamiento
                           </Typography>
                         </div>
                         <Box display="flex" alignItems="center" width="auto">
@@ -93,7 +95,7 @@ function Dashboard() {
                           >
                             <SearchIcon className={classes.searchIcon} />
                             <InputBase
-                              placeholder="Buscar Documento"
+                              placeholder="Buscar Sesion"
                               classes={{
                                 input: classes.searchInput,
                               }}
@@ -142,7 +144,7 @@ function Dashboard() {
                             classes.tableCellRootHead,
                         }}
                       >
-                        Fecha De Creacion
+                        Metodos De Entrenamiento
                       </TableCell>
                       <TableCell
                         classes={{
@@ -152,7 +154,7 @@ function Dashboard() {
                             classes.tableCellRootHead,
                         }}
                       >
-                        Autor
+                        Tipo De Sesion
                       </TableCell>
                       <TableCell
                         classes={{
@@ -162,7 +164,17 @@ function Dashboard() {
                             classes.tableCellRootHead,
                         }}
                       >
-                        Documento
+                        Sesiones
+                      </TableCell>
+                      <TableCell
+                        classes={{
+                          root:
+                            classes.tableCellRoot +
+                            " " +
+                            classes.tableCellRootHead,
+                        }}
+                      >
+                        Configuracion
                       </TableCell>
                     </TableRow>
                   </TableHead>
@@ -192,28 +204,53 @@ function Dashboard() {
                         variant="head"
                         scope="row"
                       >
-                        Documento 1
+                        Sesion 1
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
-                        13/11/2020
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Ver Detalles
+                        </a>
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
-                        Nicolas
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Ver Detalles
+                        </a>
                       </TableCell>
-                      <Box
-                        component={TableCell}
-                        className={classes.tableCellRoot}
-                        marginBottom="-2px"
-                      >
-                        <Box
-                          component={GetApp}
-                          width="1rem!important"
-                          height="1rem!important"
-                          marginRight="1rem"
-                          color={theme.palette.success.main}
-                        />
-                        Documento1.docx
-                      </Box>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Ver Detalles
+                        </a>
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          <CreateIcon/>
+                        </a>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                           <DeleteIcon
+                           color="Error"/>
+                        </a>
+                      </TableCell>
+                      
                     </TableRow>
                     <TableRow>
                       <TableCell
@@ -240,199 +277,55 @@ function Dashboard() {
                         variant="head"
                         scope="row"
                       >
-                        Documento 2
+                        Sesion 2
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
-                        13/11/2020
-                      </TableCell>
-                      <TableCell classes={{ root: classes.tableCellRoot }}>
-                        Nicolas
-                      </TableCell>
-                      <Box
-                        component={TableCell}
-                        className={classes.tableCellRoot}
-                        marginBottom="-2px"
-                      >
-                        <Box
-                          component={GetApp}
-                          width="1rem!important"
-                          height="1rem!important"
-                          marginRight="1rem"
-                          color={theme.palette.success.main}
-                        />
-                        Documento2.docx
-                      </Box>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell
-                        classes={{
-                          root:
-                            classes.tableCellRoot +
-                            " " +
-                            classes.tableCellRootBodyHead,
-                        }}
-                        component="th"
-                        variant="head"
-                        scope="row"
-                      >
-                        003
-                      </TableCell>
-                      <TableCell
-                        classes={{
-                          root:
-                            classes.tableCellRoot +
-                            " " +
-                            classes.tableCellRootBodyHead,
-                        }}
-                        component="th"
-                        variant="head"
-                        scope="row"
-                      >
-                        Documento 3
-                      </TableCell>
-                      <TableCell classes={{ root: classes.tableCellRoot }}>
-                        13/11/2020
-                      </TableCell>
-                      <TableCell classes={{ root: classes.tableCellRoot }}>
-                        Nicolas
-                      </TableCell>
-                      <Box
-                        component={TableCell}
-                        className={classes.tableCellRoot}
-                        marginBottom="-2px"
-                      >
-                        <Box
-                          component={GetApp}
-                          width="1rem!important"
-                          height="1rem!important"
-                          marginRight="1rem"
-                          color={theme.palette.success.main}
-                        />
-                        Documento3.docx
-                      </Box>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell
-                        classes={{
-                          root:
-                            classes.tableCellRoot +
-                            " " +
-                            classes.tableCellRootBodyHead,
-                        }}
-                        component="th"
-                        variant="head"
-                        scope="row"
-                      >
-                        004
-                      </TableCell>
-                      <TableCell
-                        classes={{
-                          root:
-                            classes.tableCellRoot +
-                            " " +
-                            classes.tableCellRootBodyHead,
-                        }}
-                        component="th"
-                        variant="head"
-                        scope="row"
-                      >
-                        Documento 4
-                      </TableCell>
-                      <TableCell classes={{ root: classes.tableCellRoot }}>
-                        13/11/2020
-                      </TableCell>
-                      <TableCell classes={{ root: classes.tableCellRoot }}>
-                        Nicolas
-                      </TableCell>
-                      <Box
-                        component={TableCell}
-                        className={classes.tableCellRoot}
-                        marginBottom="-2px"
-                      >
-                        <Box
-                          component={GetApp}
-                          width="1rem!important"
-                          height="1rem!important"
-                          marginRight="1rem"
-                          color={theme.palette.success.main}
-                        />
                         <a
                           href="#mui"
                           className={classes.cardProfileLink}
                           onClick={(e) => e.preventDefault()}
                         >
-                          Documento4.docx
+                          Ver Detalles
                         </a>
-                      </Box>
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Ver Detalles
+                        </a>
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Ver Detalles
+                        </a>
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          <CreateIcon/>
+                        </a>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                           <DeleteIcon
+                           color="Error"/>
+                        </a>
+                      </TableCell>
+                      
                     </TableRow>
-                    <TableRow>
-                      <TableCell
-                        classes={{
-                          root:
-                            classes.tableCellRoot +
-                            " " +
-                            classes.tableCellRootBodyHead,
-                        }}
-                        component="th"
-                        variant="head"
-                        scope="row"
-                      >
-                        005
-                      </TableCell>
-                      <TableCell
-                        classes={{
-                          root:
-                            classes.tableCellRoot +
-                            " " +
-                            classes.tableCellRootBodyHead +
-                            " " +
-                            classes.borderBottomUnset,
-                        }}
-                        component="th"
-                        variant="head"
-                        scope="row"
-                      >
-                        Documento 5
-                      </TableCell>
-                      <TableCell
-                        classes={{
-                          root:
-                            classes.tableCellRoot +
-                            " " +
-                            classes.borderBottomUnset,
-                        }}
-                      >
-                        13/11/2020
-                      </TableCell>
-                      <TableCell
-                        classes={{
-                          root:
-                            classes.tableCellRoot +
-                            " " +
-                            classes.borderBottomUnset,
-                        }}
-                      >
-                        Nicolas
-                      </TableCell>
-                      <Box
-                        component={TableCell}
-                        className={
-                          classes.tableCellRoot +
-                          " " +
-                          classes.borderBottomUnset
-                        }
-                        marginBottom="-2px"
-                      >
-                        <Box
-                          component={GetApp}
-                          width="1rem!important"
-                          height="1rem!important"
-                          marginRight="1rem"
-                          color={theme.palette.success.main}
-                        />
-                        Documento5.docx
-                      </Box>
-                    </TableRow>
+                    
                   </TableBody>
                 </Box>
               </TableContainer>

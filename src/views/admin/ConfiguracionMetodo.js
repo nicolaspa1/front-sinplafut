@@ -16,12 +16,19 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Typography from "@material-ui/core/Typography";
+import InputBase from "@material-ui/core/InputBase";
+
 
 // core components
 import UserHeader from "components/Headers/UserHeader.js";
 
-
 import componentStyles from "assets/theme/views/admin/dashboard.js";
+
+//Icons
+import DeleteIcon from '@material-ui/icons/Delete';
+import CreateIcon from '@material-ui/icons/Create';
+import SearchIcon from "@material-ui/icons/Search";
+
 
 const useStyles = makeStyles(componentStyles);
 
@@ -49,7 +56,6 @@ function Dashboard() {
         marginTop="-6rem"
         classes={{ root: classes.containerRoot }}
       >
-     
         <Grid container component={Box} marginTop="3rem">
           <Grid
             item
@@ -63,7 +69,7 @@ function Dashboard() {
                 root: classes.cardRoot,
               }}
             >
-              <CardHeader
+             <CardHeader
                 subheader={
                   <Grid
                     container
@@ -71,15 +77,48 @@ function Dashboard() {
                     alignItems="center"
                     justifyContent="space-between"
                   >
-                    <Grid item xs="auto">
+                    <Container
+                      maxWidth={false}
+                      component={Box}
+                      classes={{ root: classes.containerRoot }}
+                    >
                       <Box
-                        component={Typography}
-                        variant="h3"
-                        marginBottom="0!important"
+                        display="flex"
+                        justifyContent="space-between"
+                        alignItems="center"
+                        width="100%"
+                        marginTop="0.5rem"
                       >
-                        Buzon
+                        <div>
+                          <Typography
+                            className={classes.brandTitle}
+                            variant="h4"
+                            component="a"
+                          >
+                            Configuracion Metodo De Entrenamiento
+                          </Typography>
+                        </div>
+                        <Box display="flex" alignItems="center" width="auto">
+                          <Box
+                            display="flex"
+                            alignItems="center"
+                            width="auto"
+                            marginRight="1rem"
+                            classes={{
+                              root: classes.searchBox,
+                            }}
+                          >
+                            <SearchIcon className={classes.searchIcon} />
+                            <InputBase
+                              placeholder="Buscar Metodo"
+                              classes={{
+                                input: classes.searchInput,
+                              }}
+                            />
+                          </Box>
+                        </Box>
                       </Box>
-                    </Grid>
+                    </Container>
                   </Grid>
                 }
                 classes={{ root: classes.cardHeaderRoot }}
@@ -120,7 +159,7 @@ function Dashboard() {
                             classes.tableCellRootHead,
                         }}
                       >
-                        Asunto
+                        Descripcion
                       </TableCell>
                       <TableCell
                         classes={{
@@ -130,7 +169,57 @@ function Dashboard() {
                             classes.tableCellRootHead,
                         }}
                       >
-                        Mensaje
+                        Carga
+                      </TableCell>
+                      <TableCell
+                        classes={{
+                          root:
+                            classes.tableCellRoot +
+                            " " +
+                            classes.tableCellRootHead,
+                        }}
+                      >
+                        Intensidad
+                      </TableCell>
+                      <TableCell
+                        classes={{
+                          root:
+                            classes.tableCellRoot +
+                            " " +
+                            classes.tableCellRootHead,
+                        }}
+                      >
+                        Duracion
+                      </TableCell>
+                      <TableCell
+                        classes={{
+                          root:
+                            classes.tableCellRoot +
+                            " " +
+                            classes.tableCellRootHead,
+                        }}
+                      >
+                        Datos
+                      </TableCell>
+                      <TableCell
+                        classes={{
+                          root:
+                            classes.tableCellRoot +
+                            " " +
+                            classes.tableCellRootHead,
+                        }}
+                      >
+                        Archivos Relacionados
+                      </TableCell>
+                      <TableCell
+                        classes={{
+                          root:
+                            classes.tableCellRoot +
+                            " " +
+                            classes.tableCellRootHead,
+                        }}
+                      >
+                        Configuracion
                       </TableCell>
                     </TableRow>
                   </TableHead>
@@ -147,21 +236,58 @@ function Dashboard() {
                         variant="head"
                         scope="row"
                       >
-                        001	
+                        001
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
-                        Nicolas	
+                        Metodo De Entrenamiento 1
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
-                      Saludo
+                        Descripcion Metodo De Entrenamiento 1
                       </TableCell>
-                      <Box
-                        component={TableCell}
-                        className={classes.tableCellRoot}
-                        marginBottom="-2px"
-                      >
-                        Hola
-                      </Box>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        6 minutos
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        60%
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        20 minutos
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Ver Detalles
+                        </a>
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Ver Detalles
+                        </a>
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          <CreateIcon/>
+                        </a>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                           <DeleteIcon
+                           color="Error"/>
+                        </a>
+                      </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell
@@ -178,27 +304,61 @@ function Dashboard() {
                         002
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
-                      Nicolas	
+                        Metodo De entrenamiento 2
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
-                      xd
+                        Descripcion Metodo De Entrenamiento 1
                       </TableCell>
-                      <Box
-                        component={TableCell}
-                        className={classes.tableCellRoot}
-                        marginBottom="-2px"
-                      >
-                        xddd
-                      </Box>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        6 minutos
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        60%
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        20 minutos
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Ver Detalles
+                        </a>
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          Ver Detalles
+                        </a>
+                      </TableCell>
+                      <TableCell classes={{ root: classes.tableCellRoot }}>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          <CreateIcon/>
+                        </a>
+                        <a
+                          href="#mui"
+                          className={classes.cardProfileLink}
+                          onClick={(e) => e.preventDefault()}
+                        >
+                           <DeleteIcon
+                           color="Error"/>
+                        </a>
+                      </TableCell>
                     </TableRow>
-                    
-                    
                   </TableBody>
                 </Box>
               </TableContainer>
             </Card>
           </Grid>
-          
         </Grid>
       </Container>
     </>

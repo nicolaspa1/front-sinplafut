@@ -89,7 +89,7 @@ function Profile() {
                             component={FilledInput}
                             autoComplete="off"
                             type="text"
-                            defaultValue="Metodo 1"
+                            defaultValue=""
                           />
                         </FormControl>
                       </FormGroup>
@@ -116,7 +116,7 @@ function Profile() {
                     </Grid>
                     <Grid item xs={12} lg={6}>
                       <FormGroup>
-                        <FormLabel>Porcentaje Intensidad</FormLabel>
+                        <FormLabel>Porcentaje Intensidad (%)</FormLabel>
                         <FormControl
                           variant="filled"
                           component={Box}
@@ -128,7 +128,7 @@ function Profile() {
                             paddingRight="0.75rem"
                             component={FilledInput}
                             autoComplete="off"
-                            type="text"
+                            type="number"
                             defaultValue=""
                           />
                         </FormControl>
@@ -136,7 +136,7 @@ function Profile() {
                     </Grid>
                     <Grid item xs={12} lg={6}>
                       <FormGroup>
-                        <FormLabel>Carga - Minutos</FormLabel>
+                        <FormLabel>Carga (Minutos)</FormLabel>
                         <FormControl
                           variant="filled"
                           component={Box}
@@ -148,7 +148,7 @@ function Profile() {
                             paddingRight="0.75rem"
                             component={FilledInput}
                             autoComplete="off"
-                            type="text"
+                            type="number"
                             defaultValue=""
                           />
                         </FormControl>
@@ -156,7 +156,7 @@ function Profile() {
                     </Grid>
                     <Grid item xs={12} lg={6}>
                       <FormGroup>
-                        <FormLabel>Duracion - Minutos</FormLabel>
+                        <FormLabel>Duracion (Minutos)</FormLabel>
                         <FormControl
                           variant="filled"
                           component={Box}
@@ -168,7 +168,7 @@ function Profile() {
                             paddingRight="0.75rem"
                             component={FilledInput}
                             autoComplete="off"
-                            type="text"
+                            type="number"
                             defaultValue=""
                           />
                         </FormControl>
@@ -195,7 +195,7 @@ function Profile() {
                     </Grid>
                     <Grid item xs={12} lg={6}>
                       <FormGroup>
-                        <FormLabel>Publico?</FormLabel>
+                        <FormLabel>Hacer publico</FormLabel>
                         <FormControl
                           variant="filled"
                           component={Box}
