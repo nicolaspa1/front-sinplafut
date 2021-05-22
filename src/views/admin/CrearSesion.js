@@ -2,6 +2,9 @@ import React from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import { useTheme } from "@material-ui/core/styles";
+import { NativeSelect } from '@material-ui/core';
+
+
 import Box from "@material-ui/core/Box";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -64,7 +67,7 @@ function Profile() {
                         variant="h3"
                         marginBottom="0!important"
                       >
-                         Detalles de la cuenta
+                         Crear Sesion De Entrenamiento
                       </Box>
                     </Grid>
                     
@@ -84,89 +87,23 @@ function Profile() {
                   marginBottom="1.5rem!important"
                   classes={{ root: classes.typographyRootH6 }}
                 >
-                   Informacion Usuario
+                Microciclo De Sesion De Entrenamiento
                 </Box>
                 <div className={classes.plLg4}>
                   <Grid container>
                     <Grid item xs={12} lg={6}>
                       <FormGroup>
-                        <FormLabel>Usuario</FormLabel>
+                        <FormLabel>Microciclo</FormLabel>
                         <FormControl
                           variant="filled"
                           component={Box}
                           width="100%"
                           marginBottom="1rem!important"
                         >
-                          <Box readOnly disabled
-                            paddingLeft="0.75rem"
-                            paddingRight="0.75rem"
-                            component={FilledInput}
-                            autoComplete="off"
-                            type="text"
-                            defaultValue="nicolaspa"
-                          />
-                        </FormControl>
-                      </FormGroup>
-                    </Grid>
-                    <Grid item xs={12} lg={6}>
-                      <FormGroup>
-                        <FormLabel>Correo</FormLabel>
-                        <FormControl
-                          variant="filled"
-                          component={Box}
-                          width="100%"
-                          marginBottom="1rem!important"
-                        >
-                          <Box readOnly disabled
-                            paddingLeft="0.75rem"
-                            paddingRight="0.75rem"
-                            component={FilledInput}
-                            autoComplete="off"
-                            type="email"
-                            placeholder="nicolas@example.com"
-                          />
-                        </FormControl>
-                      </FormGroup>
-                    </Grid>
-                  </Grid>
-                  <Grid container>
-                    <Grid item xs={12} lg={6}>
-                      <FormGroup>
-                        <FormLabel>Nombres</FormLabel>
-                        <FormControl
-                          variant="filled"
-                          component={Box}
-                          width="100%"
-                          marginBottom="1rem!important"
-                        >
-                          <Box readOnly disabled
-                            paddingLeft="0.75rem"
-                            paddingRight="0.75rem"
-                            component={FilledInput}
-                            autoComplete="off"
-                            type="text"
-                            defaultValue="Nicolas"
-                          />
-                        </FormControl>
-                      </FormGroup>
-                    </Grid>
-                    <Grid item xs={12} lg={6}>
-                      <FormGroup>
-                        <FormLabel>Apellidos</FormLabel>
-                        <FormControl
-                          variant="filled"
-                          component={Box}
-                          width="100%"
-                          marginBottom="1rem!important"
-                        >
-                          <Box readOnly disabled
-                            paddingLeft="0.75rem"
-                            paddingRight="0.75rem"
-                            component={FilledInput}
-                            autoComplete="off"
-                            type="text"
-                            defaultValue="Pinzon Aparicio"
-                          />
+                          <NativeSelect id="select">
+                            <option>Microciclo 1</option>
+                            <option>Microciclo 2</option>
+                          </NativeSelect>
                         </FormControl>
                       </FormGroup>
                     </Grid>
@@ -188,7 +125,7 @@ function Profile() {
                   marginBottom="1.5rem!important"
                   classes={{ root: classes.typographyRootH6 }}
                 >
-                  Informacion De Contacto
+                  Metodos De Entrenamiento
                 </Box>
                 <div className={classes.plLg4}>
                   <Grid container>
