@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.59c0205f.chunk.css",
+    "main.js": "/static/js/main.f3ad88bd.chunk.js",
+    "main.js.map": "/static/js/main.f3ad88bd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.08454346.js",
+    "runtime-main.js.map": "/static/js/runtime-main.08454346.js.map",
+    "static/css/2.81fc0e8c.chunk.css": "/static/css/2.81fc0e8c.chunk.css",
+    "static/js/2.af132994.chunk.js": "/static/js/2.af132994.chunk.js",
+    "static/js/2.af132994.chunk.js.map": "/static/js/2.af132994.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.81fc0e8c.chunk.css.map": "/static/css/2.81fc0e8c.chunk.css.map",
+    "static/css/main.59c0205f.chunk.css.map": "/static/css/main.59c0205f.chunk.css.map",
+    "static/js/2.af132994.chunk.js.LICENSE.txt": "/static/js/2.af132994.chunk.js.LICENSE.txt",
+    "static/media/bicho.jpg": "/static/media/bicho.9931b66a.jpg",
+    "static/media/daniel.png": "/static/media/daniel.f249c3e8.png",
+    "static/media/all.min.css": "/static/media/fa-solid-900.f4f93856.woff",
+    "static/media/logo_sinplafut.png": "/static/media/logo_sinplafut.4ec129da.png",
+    "static/media/nucleo.css": "/static/media/nucleo-icons.d6a66724.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.08454346.js",
+    "static/css/2.81fc0e8c.chunk.css",
+    "static/js/2.af132994.chunk.js",
+    "static/css/main.59c0205f.chunk.css",
+    "static/js/main.f3ad88bd.chunk.js"
+  ]
+}
