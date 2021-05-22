@@ -1,9 +1,7 @@
 //TODO: Eliminar comentarios de importaciones Innecesarias
 
 import React from "react";
-// javascipt plugin for creating charts
-// import Chart from "chart.js";
-// @material-ui/core components
+
 import { makeStyles } from "@material-ui/core/styles";
 import { useTheme } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
@@ -18,16 +16,10 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Typography from "@material-ui/core/Typography";
-// @material-ui/icons components
 
 // core components
 import UserHeader from "components/Headers/UserHeader.js";
 
-// import {
-//   chartOptions,
-//   parseOptions,
-
-// } from "variables/charts.js";
 
 import componentStyles from "assets/theme/views/admin/dashboard.js";
 

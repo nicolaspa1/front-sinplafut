@@ -1,5 +1,4 @@
 import React from "react";
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import { useTheme } from "@material-ui/core/styles";
 
@@ -17,7 +16,6 @@ import FormGroup from "@material-ui/core/FormGroup";
 import FormLabel from "@material-ui/core/FormLabel";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-// @material-ui/icons components
 // core components
 import UserHeader from "components/Headers/UserHeader.js";
 
@@ -111,7 +109,7 @@ function Profile() {
                             component={FilledInput}
                             autoComplete="off"
                             type="text"
-                            defaultValue="UFPS"
+                            defaultValue=""
                           />
                         </FormControl>
                       </FormGroup>
