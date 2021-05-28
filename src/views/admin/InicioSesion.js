@@ -20,7 +20,6 @@ import Typography from "@material-ui/core/Typography";
 // core components
 import WelcomeUserHeader from "components/Headers/WelcomeUserHeader.js";
 
-
 import componentStyles from "assets/theme/views/admin/dashboard.js";
 
 const useStyles = makeStyles(componentStyles);
@@ -134,7 +133,7 @@ function Dashboard() {
                     </TableRow>
                   </TableHead>
                   <TableBody>
-                  <TableRow>
+                    <TableRow>
                       <TableCell
                         classes={{
                           root:
@@ -179,7 +178,7 @@ function Dashboard() {
                           Ver Detalles
                         </a>
                       </Box>
-                    </TableRow> 
+                    </TableRow>
                     <TableRow>
                       <TableCell
                         classes={{
@@ -225,99 +224,7 @@ function Dashboard() {
                           Ver Detalles
                         </a>
                       </Box>
-                    </TableRow> 
-                    <TableRow>
-                      <TableCell
-                        classes={{
-                          root:
-                            classes.tableCellRoot +
-                            " " +
-                            classes.tableCellRootBodyHead,
-                        }}
-                        component="th"
-                        variant="head"
-                        scope="row"
-                      >
-                        Sesion 3
-                      </TableCell>
-                      <TableCell classes={{ root: classes.tableCellRoot }}>
-                        <a
-                          href="#mui"
-                          className={classes.cardProfileLink}
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          Ver Detalles
-                        </a>
-                      </TableCell>
-                      <TableCell classes={{ root: classes.tableCellRoot }}>
-                        <a
-                          href="#mui"
-                          className={classes.cardProfileLink}
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          Ver Detalles
-                        </a>
-                      </TableCell>
-                      <Box
-                        component={TableCell}
-                        className={classes.tableCellRoot}
-                        marginBottom="-2px"
-                      >
-                        <a
-                          href="#mui"
-                          className={classes.cardProfileLink}
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          Ver Detalles
-                        </a>
-                      </Box>
-                    </TableRow> 
-                    <TableRow>
-                      <TableCell
-                        classes={{
-                          root:
-                            classes.tableCellRoot +
-                            " " +
-                            classes.tableCellRootBodyHead,
-                        }}
-                        component="th"
-                        variant="head"
-                        scope="row"
-                      >
-                        Sesion 4
-                      </TableCell>
-                      <TableCell classes={{ root: classes.tableCellRoot }}>
-                        <a
-                          href="#mui"
-                          className={classes.cardProfileLink}
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          Ver Detalles
-                        </a>
-                      </TableCell>
-                      <TableCell classes={{ root: classes.tableCellRoot }}>
-                        <a
-                          href="#mui"
-                          className={classes.cardProfileLink}
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          Ver Detalles
-                        </a>
-                      </TableCell>
-                      <Box
-                        component={TableCell}
-                        className={classes.tableCellRoot}
-                        marginBottom="-2px"
-                      >
-                        <a
-                          href="#mui"
-                          className={classes.cardProfileLink}
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          Ver Detalles
-                        </a>
-                      </Box>
-                    </TableRow>                    
+                    </TableRow>
                   </TableBody>
                 </Box>
               </TableContainer>

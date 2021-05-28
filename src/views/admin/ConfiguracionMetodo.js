@@ -273,7 +273,6 @@ function Dashboard() {
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
                         <a
-                          // href="../admin/crear-sesion-entrenamiento"
                           href="#mui"
                           className={classes.cardProfileLink}
                           onClick={(e) => e.preventDefault()}
@@ -305,16 +304,16 @@ function Dashboard() {
                         002
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
-                        Metodo De entrenamiento 2
+                        Metodo 
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
-                        Descripcion Metodo De Entrenamiento 1
+                        Descripcion 
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
-                        6 minutos
+                        10 minutos
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
-                        60%
+                        20%
                       </TableCell>
                       <TableCell classes={{ root: classes.tableCellRoot }}>
                         20 minutos
